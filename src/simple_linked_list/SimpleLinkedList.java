@@ -33,6 +33,35 @@ public class SimpleLinkedList<T> {
             System.out.print(currentNode.getData() + " -> ");
             currentNode = currentNode.getNextNode();
         }
+        System.out.println();
+    }
+
+    public void deleteNode(T data) {
+        if (head == null) {
+            System.out.println("The list is empty, you cannot eliminate.");
+            return;
+        }
+
+        if (head.getData() == data) {
+            head = head.getNextNode();
+            System.out.println("Node with data " + data + " eliminated at the head.");
+            return;
+        }
+
+        Node<T> current = head;
+        Node<T> previous = null;
+        while (current != null && current.getData() != data) {
+            previous = current;
+            current = current.getNextNode();
+        }
+
+        if (current == null) {
+            System.out.println("The node with data " + data + " was not found.");
+            return;
+        }
+
+        previous.setNextNode(current.getNextNode());
+        System.out.println("Node with data " + data + " eliminated.");
     }
 
 }

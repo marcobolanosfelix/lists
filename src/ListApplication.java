@@ -9,6 +9,8 @@ public class ListApplication {
         simpleLinkedList.addNode(5);
         simpleLinkedList.addNode(6);
         simpleLinkedList.showList();
+        simpleLinkedList.deleteNode(5);
+        simpleLinkedList.showList();
 
     }
 
