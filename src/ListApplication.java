@@ -8,8 +8,11 @@ public class ListApplication {
         simpleLinkedList.addNode(8);
         simpleLinkedList.addNode(5);
         simpleLinkedList.addNode(6);
+        simpleLinkedList.addNode(3);
         simpleLinkedList.showList();
         simpleLinkedList.deleteNode(5);
+        simpleLinkedList.showList();
+        simpleLinkedList.searchNode(6);
         simpleLinkedList.showList();
 
     }
