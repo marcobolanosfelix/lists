@@ -14,6 +14,8 @@ public class ListApplication {
         simpleLinkedList.showList();
         simpleLinkedList.searchNode(6);
         simpleLinkedList.showList();
+        simpleLinkedList.updateNode(3, 14);
+        simpleLinkedList.showList();
 
     }
 
