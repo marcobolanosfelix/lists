@@ -50,6 +50,19 @@ public class SimpleLinkedList<T> {
         System.out.println("Node with data " + data + " eliminated.");
     }
 
+    public void updateNode(T oldData, T newData) {
+        Node<T> current = head;
+        while (current != null) {
+            if (current.getData() == oldData) {
+                current.setData(newData);
+                System.out.println("The node with data " + oldData + " has been updated to " + newData + ".");
+                return;
+            }
+            current = current.getNextNode();
+        }
+        System.out.println("The node with data " + oldData + " was not been found to update.");
+    }
+
     public void showList() {
         Node<T> currentNode = head;
         if (currentNode == null) {
